@@ -10,7 +10,7 @@ import java.util.stream.*;
 
 public class TGC_StorageSessionUtils {
 
-    final private static TGC_Log d = TGC_Log.of(TGC_StorageSessionUtils.class.getSimpleName());
+    final private static TGC_Log d = TGC_Log.of(TGC_StorageSessionUtils.class);
 
     public static boolean supported() {
         return Storage.isSessionStorageSupported();

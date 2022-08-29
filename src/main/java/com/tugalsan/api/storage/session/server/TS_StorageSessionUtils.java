@@ -7,7 +7,7 @@ import com.tugalsan.api.log.server.*;
 
 public class TS_StorageSessionUtils {
 
-    final private static TS_Log d = TS_Log.of(TS_StorageSessionUtils.class.getSimpleName());
+    final private static TS_Log d = TS_Log.of(TS_StorageSessionUtils.class);
 
     public static HttpSession of(HttpServletRequest req) {
         d.ci("getInstance");
