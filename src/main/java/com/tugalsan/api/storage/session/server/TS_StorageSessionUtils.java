@@ -4,7 +4,6 @@ import java.util.*;
 import javax.servlet.http.*;
 import com.tugalsan.api.time.client.*;
 import com.tugalsan.api.log.server.*;
-import static com.tugalsan.api.time.client.TGS_Time.ofDate;
 
 public class TS_StorageSessionUtils {
 
@@ -27,11 +26,11 @@ public class TS_StorageSessionUtils {
     }
 
     public static TGS_Time getCreationTime(HttpSession session) {
-        return TGS_Time.of(new Date(session.getCreationTime()));
+        return TGS_Time.ofMillis(session.getCreationTime());
     }
 
     public static TGS_Time getLastAccessedTime(HttpSession session) {
-        return TGS_Time.of(new Date(session.getLastAccessedTime()));
+        return TGS_Time.ofMillis(session.getLastAccessedTime());
     }
 
     public static void setObj(HttpServletRequest req, String name, Object value) {
